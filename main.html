@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.2em;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .menu button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .menu button:hover {
+            background-color: #0056b3;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logout {
+            cursor: pointer;
+            background-color: #dc3545;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+        .logout:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div>Welcome In</div>
+            <div>
+                <button id="logoutButton" class="logout">Log Out</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="menu">
+                <button id="profileButton">Profile</button>
+                <button id="lessonButton">Lesson</button>
+                <button id="classButton">Class</button>
+                <button id="informationButton">Information</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect back to the login page
+        });
+
+        // Event listeners for menu buttons (can be expanded as needed)
+        document.getElementById('profileButton').addEventListener('click', function() {
+            alert('Profile button clicked');
+        });
+        document.getElementById('lessonButton').addEventListener('click', function() {
+            alert('Lesson button clicked');
+        });
+        document.getElementById('classButton').addEventListener('click', function() {
+            alert('Class button clicked');
+        });
+        document.getElementById('informationButton').addEventListener('click', function() {
+            alert('Information button clicked');
+        });
+    </script>
+</body>
+</html>
